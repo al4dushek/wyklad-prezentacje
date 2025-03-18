@@ -17,6 +17,8 @@ body {
     justify-content: center;
     gap: 10px;
     text-align: center;
+        word-break: break-word;
+        hyphens: manual;
 }
 
 .title span.dash {
@@ -230,9 +232,5 @@ footer a:hover {
         text-align: center;
         margin: 20px auto;
     }
-    .title {
-        font-size: 1.8em;
-        word-break: break-word;
-        hyphens: manual;
-    }
+
 }
