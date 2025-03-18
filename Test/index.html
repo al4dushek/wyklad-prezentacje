@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs: Wprowadzenie do HTML, CSS i JavaScript – podstawowe technologie webowe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">
+            Kurs: Wprowadzenie do HTML, CSS i JavaScript 
+            <span class="dash">–</span> 
+            podstawowe technologie webowe 
+            <i class="fas fa-laptop-code"></i>
+        </h1>
+        <nav>
+            <a href="#intro">Wprowadzenie <i class="fas fa-home"></i></a> | 
+            <a href="#html">HTML <i class="fab fa-html5"></i></a> | 
+            <a href="#css">CSS <i class="fab fa-css3-alt"></i></a> | 
+            <a href="#js">JavaScript <i class="fab fa-js"></i></a> | 
+            <a href="#test">Test <i class="fas fa-check"></i></a>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Wprowadzenie <i class="fas fa-info-circle"></i></h2>
+        <p>Witamy na kursie podstaw tworzenia stron internetowych z użyciem HTML, CSS i JavaScript:</p>
+        <ul class="intro-list">
+            <li><i class="fas fa-code"></i> HTML – struktura stron internetowych.</li>
+            <li><i class="fas fa-paint-brush"></i> CSS – stylizacja i wygląd.</li>
+            <li><i class="fas fa-play"></i> JavaScript – interaktywność.</li>
+        </ul>
+        <p>Kurs jest przeznaczony dla studentów aby pomóc prawidłowo napisać test.</p>
+    </section>
+
+    <section id="html">
+        <h2>HTML: Struktura strony <i class="fab fa-html5"></i></h2>
+        <p>HTML (HyperText Markup Language) to język znaczników do tworzenia stron internetowych. Używa znaczników, na przykład:</p>
+        <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;title&gt;Moja strona&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Witaj, świecie!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p>Podstawowe znaczniki: <code>&lt;h1&gt;</code> dla nagłówków, <code>&lt;p&gt;</code> dla akapitów, <code>&lt;a&gt;</code> dla linków.</p>
+    </section>
+
+    <section id="css">
+        <h2>CSS: Stylizacja <i class="fab fa-css3-alt"></i></h2>
+        <p>CSS (Cascading Style Sheets) odpowiada za wygląd strony. Przykład:</p>
+        <pre class="code-block">
+h1 {
+    color: navy;
+    font-size: 24px;
+}
+        </pre>
+        <p>Podłączanie CSS: przez <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>.</p>
+    </section>
+
+    <section id="js">
+        <h2>JavaScript: Interaktywność <i class="fab fa-js"></i></h2>
+        <p>JavaScript dodaje interaktywność. Przykład:</p>
+        <pre class="code-block">
+function powitanie() {
+    alert("Witaj!");
+}
+        </pre>
+        <p>Służy do manipulacji DOM, obsługi zdarzeń i wiele więcej.</p>
+        <button onclick="showTestOnly()" class="jump-btn">Przejdź do testu <i class="fas fa-arrow-right"></i></button>
+    </section>
+
+    <section id="test" style="display: none;">
+        <h2>Test: Sprawdź swoją wiedzę <i class="fas fa-question-circle"></i></h2>
+        <form id="quizForm" onsubmit="checkAnswers(event)">
+            <div class="question">
+                <h3>1. Co oznacza skrót HTML?</h3>
+                <label><input type="radio" name="q1" value="a"> a) HomeText Markup Language</label><br>
+                <label><input type="radio" name="q1" value="b"> b) HighText Machine Language</label><br>
+                <label><input type="radio" name="q1" value="c"> c) HyperTool Markup Language</label><br>
+                <label><input type="radio" name="q1" value="d"> d) HyperText Markup Language</label> 
+            </div>
+
+            <div class="question">
+                <h3>2. Który znacznik tworzy nagłówek?</h3>
+                <label><input type="radio" name="q2" value="a"> a) &lt;h1&gt;</label><br> 
+                <label><input type="radio" name="q2" value="b"> b) &lt;div&gt;</label><br>
+                <label><input type="radio" name="q2" value="c"> c) &lt;span&gt;</label><br>
+                <label><input type="radio" name="q2" value="d"> d) &lt;p&gt;</label>
+            </div>
+
+            <div class="question">
+                <h3>3. Jak podłączyć zewnętrzny plik CSS?</h3>
+                <label><input type="radio" name="q3" value="a"> a) &lt;css href="styles.css"&gt;</label><br>
+                <label><input type="radio" name="q3" value="b"> b) &lt;link rel="stylesheet" href="styles.css"&gt;</label><br>
+                <label><input type="radio" name="q3" value="c"> c) &lt;style src="styles.css"&gt;</label><br>
+                <label><input type="radio" name="q3" value="d"> d) &lt;script src="styles.css"&gt;</label>
+            </div>
+
+            <div class="question">
+                <h3>4. Co robi funkcja alert() w JavaScript?</h3>
+                <label><input type="radio" name="q4" value="a"> a) Zmienia kolor tekstu</label><br>
+                <label><input type="radio" name="q4" value="b"> b) Dodaje nowy element HTML</label><br>
+                <label><input type="radio" name="q4" value="c"> c) Wyświetla okno z komunikatem</label><br>
+                <label><input type="radio" name="q4" value="d"> d) Usuwa element ze strony</label>
+            </div>
+
+            <div class="question">
+                <h3>5. Który selektor stylizuje element z klasą "intro"?</h3>
+                <label><input type="radio" name="q5" value="a"> a) #intro</label><br>
+                <label><input type="radio" name="q5" value="b"> b) &lt;intro&gt;</label><br>
+                <label><input type="radio" name="q5" value="c"> c) intro</label><br>
+                <label><input type="radio" name="q5" value="d"> d) .intro</label> 
+            </div>
+
+            <div class="question">
+                <h3>6. Co robi właściwość margin w CSS?</h3>
+                <label><input type="radio" name="q6" value="a"> a) Zmienia kolor tekstu</label><br>
+                <label><input type="radio" name="q6" value="b"> b) Ustawia zewnętrzne odstępy</label><br> 
+                <label><input type="radio" name="q6" value="c"> c) Zmienia czcionkę</label><br>
+                <label><input type="radio" name="q6" value="d"> d) Dodaje wewnętrzne odstępy</label>
+            </div>
+
+            <div class="question">
+                <h3>7. Jak zadeklarować zmienną w JavaScript?</h3>
+                <label><input type="radio" name="q7" value="a"> a) let x = 10</label><br> 
+                <label><input type="radio" name="q7" value="b"> b) x = 10</label><br>
+                <label><input type="radio" name="q7" value="c"> c) const x = 10</label><br>
+                <label><input type="radio" name="q7" value="d"> d) variable x = 10</label>
+            </div>
+
+            <div class="question">
+                <h3>8. Co robi document.getElementById()?</h3>
+                <label><input type="radio" name="q8" value="a"> a) Zmienia styl</label><br>
+                <label><input type="radio" name="q8" value="b"> b) Tworzy nowy element</label><br>
+                <label><input type="radio" name="q8" value="c"> c) Usuwa element</label><br>
+                <label><input type="radio" name="q8" value="d"> d) Znajduje element po ID</label> 
+            </div>
+
+            <div class="question">
+                <h3>9. Który znacznik służy do listy nieuporządkowanej?</h3>
+                <label><input type="radio" name="q9" value="a"> a) &lt;dl&gt;</label><br>
+                <label><input type="radio" name="q9" value="b"> b) &lt;li&gt;</label><br>
+                <label><input type="radio" name="q9" value="c"> c) &lt;ul&gt;</label><br>
+                <label><input type="radio" name="q9" value="d"> d) &lt;ol&gt;</label>
+            </div>
+
+            <div class="question">
+                <h3>10. Co się stanie przy użyciu :hover w CSS?</h3>
+                <label><input type="radio" name="q10" value="a"> a) Styl zmieni się po najechaniu myszą</label><br>
+                <label><input type="radio" name="q10" value="b"> b) Styl zmieni się po załadowaniu</label><br>
+                <label><input type="radio" name="q10" value="c"> c) Styl się nie zmieni</label><br>
+                <label><input type="radio" name="q10" value="d"> d) Styl zmieni się po kliknięciu</label>
+            </div>
+
+            <div class="question">
+                <h3>11. Jaki jest główny cel stosowania znaczników semantycznych w HTML5?</h3>
+                <label><input type="radio" name="q11" value="a"> a) Zwiększenie atrakcyjności wizualnej strony</label><br>
+                <label><input type="radio" name="q11" value="b"> b) Poprawa struktury i dostępności strony dla wyszukiwarek i czytników ekranowych</label><br>
+                <label><input type="radio" name="q11" value="c"> c) Przyspieszenie działania JavaScript na stronie</label><br>
+                <label><input type="radio" name="q11" value="d"> d) Optymalizacja obrazów na stronie</label>
+            </div>
+
+            <div class="question">
+                <h3>12. Jakie nowe API zostały wprowadzone w HTML5?</h3>
+                <label><input type="radio" name="q12" value="a"> a) Geolokalizacja, Web Storage, WebSockets</label><br>
+                <label><input type="radio" name="q12" value="b"> b) Bootstrap, jQuery, AJAX</label><br>
+                <label><input type="radio" name="q12" value="c"> c) PHP, SQL, XML</label><br>
+                <label><input type="radio" name="q12" value="d"> d) GraphQL, React, Redux</label>
+            </div>
+                        
+            <div class="question">
+                <h3>13. Które zdanie najlepiej opisuje różnicę między <code>let</code> i <code>const</code> w JavaScript?</h3>
+                <label><input type="radio" name="q13" value="a"> a) <code>let</code> tworzy zmienne globalne, a <code>const</code> lokalne</label><br>
+                <label><input type="radio" name="q13" value="b"> b) <code>let</code> pozwala na zmianę wartości zmiennej, a <code>const</code> blokuje jej modyfikację</label><br>
+                <label><input type="radio" name="q13" value="c"> c) <code>let</code> służy do deklaracji funkcji, a <code>const</code> do deklaracji obiektów</label><br>
+                <label><input type="radio" name="q13" value="d"> d) <code>const</code> jest szybsze niż <code>let</code> w wykonywaniu kodu</label>
+            </div>  
+
+            <div class="question">
+                <h3>14. Jakie są zalety stosowania zewnętrznego arkusza stylów CSS według prezentacji?</h3>
+                <label><input type="radio" name="q14" value="a"> a) Spójność wizualna na całej stronie</label><br>
+                <label><input type="radio" name="q14" value="b"> b) Szybsze ładowanie strony dzięki buforowaniu</label><br>
+                <label><input type="radio" name="q14" value="c"> c) Łatwiejsza modyfikacja wyglądu całej witryny</label><br>
+                <label><input type="radio" name="q14" value="d"> d) Wszystkie powyższe</label><br>
+            </div>
+            
+            <div class="question">
+                <h3>15. Jakie są główne różnice między CSS Grid a Flexboxem według prezentacji?</h3>
+                <label><input type="radio" name="q15" value="a"> a) CSS Grid umożliwia tworzenie układów jednowymiarowych, a Flexbox – dwuwymiarowych</label><br>
+                <label><input type="radio" name="q15" value="b"> b) CSS Grid służy do układów dwuwymiarowych, a Flexbox do jednowymiarowych</label><br>
+                <label><input type="radio" name="q15" value="c"> c) Oba rozwiązania działają identycznie</label><br>
+                <label><input type="radio" name="q15" value="d"> d) Flexbox jest używany tylko do responsywnych projektów</label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Sprawdź odpowiedzi <i class="fas fa-check-circle"></i></button>
+        </form>
+        <div id="result"></div>
+    </section>
+
+    <footer>
+        <p>© Vistula 2025, Autor: Vladyslav Harbuz. Kod dostępny na <a href="https://github.com/al4dushek/Course"><i class="fab fa-github"></i> GitHub</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
